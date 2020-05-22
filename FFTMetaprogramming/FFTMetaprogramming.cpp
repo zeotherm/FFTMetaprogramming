@@ -200,7 +200,7 @@ int main()
 	std::copy(data, data + array_len, std::ostream_iterator<double>(std::cout, " "));
 	auto x = GFFT<log_2(N), double>();
 	x.fft(data);
-	std::cout << "\nFFT'd data:\n";
+	std::cout << "\nFFT'd data:" << endl;
 	for (unsigned int i = 0; i < N; ++i) {
 		char sign = '+';
 		if (data[2 * i + 1] < 0) sign = '-';
